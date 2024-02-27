@@ -1,0 +1,15 @@
+{
+  "name": "@unplugin-analytics/nuxt-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "start": "nuxi preview"
+  },
+  "devDependencies": {
+    "nuxt": "^3.10.3",
+    "unplugin-analytics": "workspace:*"
+  }
+}
