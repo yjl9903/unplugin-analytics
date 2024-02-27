@@ -42,7 +42,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@unplugin-analytics/core": "workspace:*"
+    "@unplugin-analytics/core": "workspace:*",
+    "scule": "^1.3.0"
   },
   "peerDependencies": {
     "vite": ">=3.2.7"
