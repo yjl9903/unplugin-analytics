@@ -48,6 +48,62 @@ Full example is located at [examples/vite](https://github.com/yjl9903/unplugin-a
 <br></details>
 
 <details>
+<summary>Astro</summary><br>
+
+```ts
+// astro.config.mjs
+
+import Analytics from 'unplugin-analytics/vite';
+
+export default defineConfig({
+  integrations: [
+    Analytics({
+      analytics: {
+        cloudflare: {
+          beacon: '...'
+        },
+        // Your unplugin-analytics options ...
+      }
+    })
+  ],
+});
+```
+
+Then add the astro component made of injected scripts to your layouts.
+
+```astro
+---
+import Analytics from '~analytics/component.astro'
+
+// ...
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Inject the scripts begin -->
+    <Analytics />
+    <!-- Inject the scripts end -->
+
+    <meta name="generator" content={Astro.generator} />
+    <!-- ... -->
+  </head>
+  <body>
+    <!-- ... -->
+  </body>
+</html>
+```
+
+Full example is located at [examples/astro](https://github.com/yjl9903/unplugin-analytics/blob/main/examples/astro).
+
+<br></details>
+
+<details>
 <summary>Nuxt</summary><br>
 
 ```ts
