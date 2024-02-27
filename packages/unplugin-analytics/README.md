@@ -48,6 +48,31 @@ Full example is located at [examples/vite](https://github.com/yjl9903/unplugin-a
 <br></details>
 
 <details>
+<summary>VitePress</summary><br>
+
+```ts
+// .vitepress/config.ts
+
+import { defineConfig } from 'vitepress';
+
+import { injectScriptTags } from 'unplugin-analytics/vitepress';
+
+export default defineConfig({
+  async transformHead(context) {
+    // Add the following code
+    injectScriptTags({
+      cloudflare: {
+        beacon: '...'
+      },
+      // Your unplugin-analytics options ...
+    })(context);
+  },
+});
+```
+
+<br></details>
+
+<details>
 <summary>Astro</summary><br>
 
 ```ts
