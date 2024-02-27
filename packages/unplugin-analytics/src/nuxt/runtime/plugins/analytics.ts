@@ -7,8 +7,11 @@ import { defineNuxtPlugin, useHead, useRuntimeConfig } from '#imports';
 export default defineNuxtPlugin({
   parallel: true,
   setup() {
+    // Skip dev mode
+    if (import.meta.dev) return;
+
     const options = useRuntimeConfig().public.analytics as AnalyticsOptions;
-    const tags = generate(options);
+    const tags = generate(options ?? {});
 
     useHead({
       script: tags.map((tag) => {
