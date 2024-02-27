@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { build } from 'vite';
 
+import { build } from 'vite';
 import { describe, it, expect } from 'vitest';
 
 describe('vite', () => {
