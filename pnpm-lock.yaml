@@ -48,7 +48,11 @@ importers:
         specifier: ^5.90.3
         version: 5.90.3(esbuild@0.20.1)
 
-  packages/core: {}
+  packages/core:
+    dependencies:
+      scule:
+        specifier: ^1.3.0
+        version: 1.3.0
 
   packages/unplugin-analytics:
     dependencies:
