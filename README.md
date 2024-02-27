@@ -27,7 +27,7 @@ npm i -D unplugin-analytics
 ```ts
 // vite.config.ts
 
-import Analytics from 'unplugin-analytics/astro';
+import Analytics from 'unplugin-analytics/vite';
 
 export default defineConfig({
   plugins: [
@@ -53,7 +53,7 @@ Full example is located at [examples/vite](https://github.com/yjl9903/unplugin-a
 ```ts
 // astro.config.mjs
 
-import Analytics from 'unplugin-analytics/vite';
+import Analytics from 'unplugin-analytics/astro';
 
 export default defineConfig({
   integrations: [
@@ -73,6 +73,8 @@ Then add the astro component made of injected scripts to your layouts.
 
 ```astro
 ---
+// src/layouts/Layout.astro
+
 import Analytics from '~analytics/component.astro'
 
 // ...
