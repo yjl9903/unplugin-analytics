@@ -20,6 +20,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://us.umami.is/script.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]
@@ -40,6 +41,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://umami.onekuma.cn/script.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]
@@ -60,6 +62,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://umami.onekuma.cn/script.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]
@@ -81,6 +84,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://plausible.io/js/script.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]
@@ -101,6 +105,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://plausible.io/js/script.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]
@@ -122,6 +127,7 @@ describe('Generate script tags', () => {
             "defer": true,
             "src": "https://static.cloudflareinsights.com/beacon.min.js",
           },
+          "injectTo": "head",
           "tag": "script",
         },
       ]

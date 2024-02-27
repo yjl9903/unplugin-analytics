@@ -7,7 +7,8 @@ import type { ScriptTag } from '@unplugin-analytics/core';
 export function renderScriptTag(tag: ScriptTag) {
   const desc: HtmlTagDescriptor = {
     tag: 'script',
-    attrs: {}
+    attrs: {},
+    injectTo: 'head'
   };
   if (tag.async) {
     desc.attrs!.async = true;

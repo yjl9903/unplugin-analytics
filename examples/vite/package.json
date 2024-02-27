@@ -1,0 +1,13 @@
+{
+  "name": "@unplugin-analytics/vite-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@onekuma/preset.css": "^0.1.11",
+    "@onekuma/reset": "^0.1.11"
+  }
+}
