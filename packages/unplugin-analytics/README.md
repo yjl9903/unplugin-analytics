@@ -4,8 +4,6 @@
 [![GitHub License](https://img.shields.io/github/license/yjl9903/unplugin-analytics)](https://github.com/yjl9903/unplugin-analytics/blob/main/LICENSE)
 [![CI](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml)
 
-> Still work in progress.
-
 Universal Analytics Engines Integration.
 
 Support analytics engines:
