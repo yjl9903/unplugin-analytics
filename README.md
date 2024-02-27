@@ -6,6 +6,13 @@
 
 Universal Analytics Engines Integration.
 
+Support analytics engines:
+
+- Umami
+- Plausible
+- Cloudflare Web Analytics
+- Microsoft Clarity
+
 ## Installation
 
 ```bash
