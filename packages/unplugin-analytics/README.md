@@ -53,7 +53,7 @@ Full example is located at [examples/vite](https://github.com/yjl9903/unplugin-a
 ```ts
 // astro.config.mjs
 
-import Analytics from 'unplugin-analytics/vite';
+import Analytics from 'unplugin-analytics/astro';
 
 export default defineConfig({
   integrations: [

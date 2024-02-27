@@ -27,7 +27,7 @@ npm i -D unplugin-analytics
 ```ts
 // vite.config.ts
 
-import Analytics from 'unplugin-analytics/vite';
+import Analytics from 'unplugin-analytics/astro';
 
 export default defineConfig({
   plugins: [
