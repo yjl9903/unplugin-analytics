@@ -48,6 +48,8 @@ importers:
         specifier: ^5.90.3
         version: 5.90.3(esbuild@0.20.1)
 
+  packages/core: {}
+
   packages/unplugin-analytics:
     dependencies:
       '@nuxt/kit':
@@ -56,6 +58,9 @@ importers:
       '@nuxt/schema':
         specifier: ^3
         version: 3.10.3(rollup@4.12.0)
+      '@unplugin-analytics/core':
+        specifier: workspace:*
+        version: link:../core
       esbuild:
         specifier: '*'
         version: 0.20.1
