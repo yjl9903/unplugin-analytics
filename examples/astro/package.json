@@ -1,0 +1,13 @@
+{
+  "name": "@unplugin-analytics/vite-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev"
+  },
+  "devDependencies": {
+    "astro": "^4.4.5",
+    "unplugin-analytics": "workspace:*"
+  }
+}

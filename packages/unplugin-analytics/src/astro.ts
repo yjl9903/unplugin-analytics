@@ -1,6 +1,6 @@
 import type { Options } from './plugin';
 
-export default (options: Options | undefined) => ({
+export default (options: Options = {}) => ({
   name: 'unplugin-analytics',
   hooks: {
     'astro:config:setup': async (astro: any) => {
@@ -9,3 +9,9 @@ export default (options: Options | undefined) => ({
     }
   }
 });
+
+function VitePlugin() {
+  return {
+    name: 'unplugin-analytics:astro'
+  };
+}
