@@ -17,7 +17,7 @@ describe('vite', () => {
     const expected = [
       `<script defer data-website-id="a8602a4a-8d41-4df7-9797-5bd074785f2c" src="https://umami.onekuma.cn/script.js"></script>`,
       `<script defer data-domain="garden.onekuma.cn" src="https://plausible.io/js/script.js"></script>`,
-      `<script defer data-cf-beacon="{\\"token\\": \\"aa68fa3bf166467082bc79ba029b057f\\"}" src="https://static.cloudflareinsights.com/beacon.min.js"></script>`,
+      `<script defer data-cf-beacon="{&quot;token&quot;: &quot;aa68fa3bf166467082bc79ba029b057f&quot;}" src="https://static.cloudflareinsights.com/beacon.min.js"></script>`,
       `(window, document, "clarity", "script", "kwj19d7z4j")`
     ];
     for (const text of expected) {
