@@ -1,0 +1,51 @@
+{
+  "name": "vite-plugin-analytics",
+  "version": "0.0.0",
+  "description": "Universal Analytics Engines Integration",
+  "keywords": [
+    "analytics",
+    "google-analytics",
+    "umami",
+    "plausible",
+    "vite-plugin",
+    "vite"
+  ],
+  "homepage": "https://github.com/yjl9903/unplugin-analytics#readme",
+  "bugs": {
+    "url": "https://github.com/yjl9903/unplugin-analytics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjl9903/unplugin-analytics.git"
+  },
+  "license": "MIT",
+  "author": "XLor",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "format": "prettier --write src/**/*.ts test/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@unplugin-analytics/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "vite": ">=3.2.7"
+  },
+  "engines": {
+    "node": ">=v20.10.0"
+  }
+}

@@ -77,6 +77,15 @@ importers:
         specifier: ^4 || ^5
         version: 5.90.3(esbuild@0.20.1)
 
+  packages/vite-plugin-analytics:
+    dependencies:
+      '@unplugin-analytics/core':
+        specifier: workspace:*
+        version: link:../core
+      vite:
+        specifier: '>=3.2.7'
+        version: 5.1.4(@types/node@20.11.20)
+
 packages:
 
   /@ampproject/remapping@2.2.1:

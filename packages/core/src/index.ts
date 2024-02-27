@@ -1,3 +1,3 @@
 export * from './generate';
 
-export { AnalyticsOptions } from './types';
+export type { AnalyticsOptions } from './types';
