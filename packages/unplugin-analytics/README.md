@@ -101,6 +101,28 @@ import Analytics from '~analytics/component.astro'
 </html>
 ```
 
+To make the TypeScript work, you can add `unplugin-analytics/types` to your corresponding `tsconfig.json`.
+
+```json5
+{
+  "compilerOptions": {
+    // ...
+    "types": [
+      "unplugin-analytics/client"
+    ],
+  },
+  // ...
+}
+```
+
+Or you can add TypeScript [triple-slash directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html) to your `.d.ts` (i.e. for projects initialized by Vite, it may be `src/env.d.ts`).
+
+```ts
+// Your .d.ts file
+
+/// <reference types="unplugin-analytics/client" />
+```
+
 Full example is located at [examples/astro](https://github.com/yjl9903/unplugin-analytics/blob/main/examples/astro).
 
 <br></details>

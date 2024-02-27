@@ -29,6 +29,7 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
+    "./*": "./*",
     "./vite": {
       "types": "./dist/vite.d.ts",
       "import": "./dist/vite.mjs",
@@ -43,6 +44,9 @@
       "types": "./dist/nuxt.d.ts",
       "import": "./dist/nuxt.mjs",
       "require": "./dist/nuxt.cjs"
+    },
+    "./client": {
+      "types": "./client.d.ts"
     }
   },
   "main": "dist/index.cjs",
