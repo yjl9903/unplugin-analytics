@@ -4,7 +4,7 @@ import { type AnalyticsOptions, generate } from '@unplugin-analytics/core';
 
 import { renderScriptTag } from './render';
 
-export interface Options {
+interface Options {
   /**
    * Whether inject scripts during development
    */
@@ -27,7 +27,7 @@ export default function Analytics(options: Options = {}): Plugin {
       if (options.dev && config.command === 'serve') {
         return;
       }
-      return tags.map(renderScriptTag);
+      return tags.map(renderScriptTag).filter(Boolean);
     }
   };
 }
