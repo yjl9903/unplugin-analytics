@@ -3,11 +3,13 @@ import type { ScriptTag } from '../tag';
 export const ClarityKey = 'clarity';
 
 export interface ClarityOptions {
-  id: string;
+  id: string | undefined;
 }
 
-export function Clarity(options: ClarityOptions): ScriptTag {
+export function Clarity(options: ClarityOptions): ScriptTag | undefined {
   const id = options.id;
+
+  if (!id) return undefined;
 
   return {
     type: `text/javascript`,

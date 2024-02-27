@@ -8,12 +8,14 @@ export interface UmamiOptions {
    */
   src?: string;
 
-  id: string;
+  id: string | undefined;
 }
 
-export function Umami(options: UmamiOptions): ScriptTag {
+export function Umami(options: UmamiOptions): ScriptTag | undefined {
   const src = resolveSrc(options.src ?? `https://us.umami.is/script.js`);
   const websiteId = options.id;
+
+  if (!websiteId) return undefined;
 
   return {
     src,

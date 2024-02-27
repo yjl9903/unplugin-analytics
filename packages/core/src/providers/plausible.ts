@@ -8,12 +8,14 @@ export interface PlausibleOptions {
    */
   src?: string;
 
-  domain: string;
+  domain: string | undefined;
 }
 
-export function Plausible(options: PlausibleOptions): ScriptTag {
+export function Plausible(options: PlausibleOptions): ScriptTag | undefined {
   const src = resolveSrc(options.src ?? `https://plausible.io/js/script.js`);
   const domain = options.domain;
+
+  if (!domain) return undefined;
 
   return {
     src,

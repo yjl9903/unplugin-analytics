@@ -8,12 +8,14 @@ export interface CloudflareOptions {
    */
   src?: string;
 
-  beacon: string;
+  beacon: string | undefined;
 }
 
-export function Cloudflare(options: CloudflareOptions): ScriptTag {
+export function Cloudflare(options: CloudflareOptions): ScriptTag | undefined {
   const src = options.src ?? `https://static.cloudflareinsights.com/beacon.min.js`;
   const beacon = options.beacon;
+
+  if (!beacon) return undefined;
 
   return {
     src,
