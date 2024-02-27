@@ -10,10 +10,10 @@ Universal Analytics Engines Integration.
 
 Support analytics engines:
 
-- Umami
-- Plausible
-- Cloudflare Web Analytics
-- Microsoft Clarity
+- [Umami](https://umami.is/)
+- [Plausible](https://plausible.io/)
+- [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
+- [Microsoft Clarity](https://clarity.microsoft.com/)
 
 ## Installation
 
