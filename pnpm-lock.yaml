@@ -56,6 +56,9 @@ importers:
       '@onekuma/reset':
         specifier: ^0.1.11
         version: 0.1.11
+      vite-plugin-analytics:
+        specifier: workspace:*
+        version: link:../../packages/vite-plugin-analytics
 
   packages/core: {}
 

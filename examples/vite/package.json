@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@onekuma/preset.css": "^0.1.11",
-    "@onekuma/reset": "^0.1.11"
+    "@onekuma/reset": "^0.1.11",
+    "vite-plugin-analytics": "workspace:*"
   }
 }
