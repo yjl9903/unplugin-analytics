@@ -1,5 +1,5 @@
 {
-  "name": "@unplugin-analytics/vite-demo",
+  "name": "@unplugin-analytics/astro-demo",
   "private": true,
   "type": "module",
   "scripts": {

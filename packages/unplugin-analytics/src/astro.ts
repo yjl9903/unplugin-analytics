@@ -3,6 +3,8 @@ import { generate } from '@unplugin-analytics/core';
 
 import type { Options } from './plugin';
 
+import './env.d';
+
 export default (options: Options = {}) => ({
   name: 'unplugin-analytics',
   hooks: {
