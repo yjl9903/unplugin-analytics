@@ -32,6 +32,8 @@ importers:
 
   packages/core: {}
 
+  packages/unpluginanalytics: {}
+
 packages:
 
   /@ampproject/remapping@2.2.1:

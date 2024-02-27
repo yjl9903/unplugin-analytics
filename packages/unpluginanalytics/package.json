@@ -1,18 +1,18 @@
 {
-  "name": "[repo]",
+  "name": "unplugin-analytics",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/[actor]/[repo]#readme",
+  "homepage": "https://github.com/yjl9903/unplugin-analytics#readme",
   "bugs": {
-    "url": "https://github.com/[actor]/[repo]/issues"
+    "url": "https://github.com/yjl9903/unplugin-analytics/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/[actor]/[repo].git"
+    "url": "git+https://github.com/yjl9903/unplugin-analytics.git"
   },
   "license": "MIT",
-  "author": "[username]",
+  "author": "XLor",
   "sideEffects": false,
   "exports": {
     ".": {
