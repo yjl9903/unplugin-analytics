@@ -1,5 +1,5 @@
 {
-  "name": "unplugin-analytics",
+  "name": "vite-plugin-analytics",
   "version": "0.0.0",
   "description": "Universal Analytics Engines Integration",
   "keywords": [

@@ -1,4 +1,4 @@
-# unplugin-analytics
+# vite-plugin-analytics
 
 [![CI](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml)
 
@@ -9,7 +9,7 @@ Universal Analytics Engines Integration.
 ## Installation
 
 ```bash
-npm i -D unplugin-analytics
+npm i -D vite-plugin-analytics
 ```
 
 ## Usage
