@@ -101,7 +101,7 @@ import Analytics from '~analytics/scripts.astro'
 </html>
 ```
 
-To make the TypeScript work, you can add `unplugin-analytics/types` to your corresponding `tsconfig.json`.
+To make the TypeScript work, you can add `unplugin-analytics/client` to your corresponding `tsconfig.json`.
 
 ```json5
 {
