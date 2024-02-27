@@ -160,3 +160,45 @@ describe('Generate script tags', () => {
     `);
   });
 });
+
+describe('Generate empty tags', () => {
+  it('should not generate umami', () => {
+    expect(
+      generate({
+        umami: {
+          id: undefined
+        }
+      })
+    ).toMatchInlineSnapshot(`[]`);
+  });
+
+  it('should not generate plausible', () => {
+    expect(
+      generate({
+        plausible: {
+          domain: undefined
+        }
+      })
+    ).toMatchInlineSnapshot(`[]`);
+  });
+
+  it('should not generate cloudflare', () => {
+    expect(
+      generate({
+        plausible: {
+          domain: undefined
+        }
+      })
+    ).toMatchInlineSnapshot(`[]`);
+  });
+
+  it('should not generate clarity', () => {
+    expect(
+      generate({
+        cloudflare: {
+          beacon: undefined
+        }
+      })
+    ).toMatchInlineSnapshot(`[]`);
+  });
+});
