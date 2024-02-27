@@ -1,5 +1,7 @@
 # unplugin-analytics
 
+[![version](https://img.shields.io/npm/v/unplugin-analytics?label=unplugin-analytics)](https://www.npmjs.com/package/unplugin-analytics)
+[![GitHub License](https://img.shields.io/github/license/yjl9903/unplugin-analytics)](https://github.com/yjl9903/unplugin-analytics/blob/main/LICENSE)
 [![CI](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/yjl9903/unplugin-analytics/actions/workflows/ci.yml)
 
 > Still work in progress.
