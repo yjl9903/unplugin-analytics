@@ -14,15 +14,24 @@ export default (options: Options = {}) => ({
 });
 
 function VitePlugin(options: Options) {
+  let config: any;
+
   const Component = `~analytics/component.astro`;
 
   return {
     name: 'unplugin-analytics:astro',
+    configResolved(resolvedConfig: any) {
+      config = resolvedConfig;
+    },
     resolveId(id: string) {
       if (id === Component) return id;
     },
     async load(id: string) {
       if (id === Component) {
+        if (options.dev && config.command === 'serve') {
+          return ``;
+        }
+
         const tags = generate(options.analytics ?? {});
         const rendered = tags.map((tag) => {
           const pieces: string[] = [];

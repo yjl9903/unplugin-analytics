@@ -14,15 +14,20 @@ export interface Options {
 }
 
 export const UnpluginAnalytics = createUnplugin<Options | undefined>((options = {}) => {
-  const tags = generate(options.analytics ?? []);
+  let config: any;
 
   return {
     name: 'unplugin-analytics',
     vite: {
+      configResolved(resolvedConfig: any) {
+        config = resolvedConfig;
+      },
       transformIndexHtml(_html, ctx) {
-        if (options.dev && ctx.server) {
+        if (options.dev && config.command === 'serve') {
           return;
         }
+
+        const tags = generate(options.analytics ?? []);
         return tags.map(renderScriptTag).filter(Boolean);
       }
     }
