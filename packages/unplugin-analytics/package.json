@@ -34,6 +34,11 @@
       "import": "./dist/vite.mjs",
       "require": "./dist/vite.cjs"
     },
+    "./astro": {
+      "types": "./dist/astro.d.ts",
+      "import": "./dist/astro.mjs",
+      "require": "./dist/astro.cjs"
+    },
     "./nuxt": {
       "types": "./dist/nuxt.d.ts",
       "import": "./dist/nuxt.mjs",

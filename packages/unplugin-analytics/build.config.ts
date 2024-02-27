@@ -5,6 +5,7 @@ export default defineBuildConfig({
     'src/index.ts',
     'src/vite.ts',
     'src/nuxt.ts',
+    'src/astro.ts',
     { input: 'src/nuxt/runtime/', outDir: `dist/runtime`, ext: 'mjs' }
   ],
   declaration: true,
