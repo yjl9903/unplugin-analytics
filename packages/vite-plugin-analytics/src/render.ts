@@ -17,7 +17,7 @@ export function renderScriptTag(tag: ScriptTag) {
     desc.attrs!.defer = true;
   }
   for (const [key, value] of Object.entries(tag.dataset ?? {})) {
-    desc.attrs![kebabCase(`data-${key}`)] = value;
+    desc.attrs![kebabCase(`data-${key}`)] = escape(value);
   }
 
   if ('src' in tag) {
@@ -27,4 +27,8 @@ export function renderScriptTag(tag: ScriptTag) {
   }
 
   return desc;
+}
+
+function escape(text: string) {
+  return text.replace(/"/g, `&quot;`);
 }
