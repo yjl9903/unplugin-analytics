@@ -35,6 +35,11 @@
       "import": "./dist/vite.mjs",
       "require": "./dist/vite.cjs"
     },
+    "./vitepress": {
+      "types": "./dist/vitepress.d.ts",
+      "import": "./dist/vitepress.mjs",
+      "require": "./dist/vitepress.cjs"
+    },
     "./astro": {
       "types": "./dist/astro.d.ts",
       "import": "./dist/astro.mjs",
