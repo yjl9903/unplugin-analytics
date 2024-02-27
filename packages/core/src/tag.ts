@@ -1,13 +1,13 @@
-export interface ScriptTag {
-  key?: string;
+import type { Prettify } from './utils';
 
-  src: string;
+export type ScriptTag = Prettify<
+  ({ src: string } | { children: string; type?: string }) & {
+    key?: string;
 
-  async?: boolean;
+    async?: boolean;
 
-  defer?: boolean;
+    defer?: boolean;
 
-  children?: string;
-
-  dataset?: Record<string, string>;
-}
+    dataset?: Record<string, string>;
+  }
+>;
