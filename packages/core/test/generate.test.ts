@@ -99,4 +99,24 @@ describe('Generate script tags', () => {
       ]
     `);
   });
+
+  it('should generate cloudflare', () => {
+    expect(
+      generate({
+        cloudflare: {
+          beacon: `aa68fa3bf166467082bc79ba029b057f`
+        }
+      })
+    ).toMatchInlineSnapshot(`
+      [
+        {
+          "dataset": {
+            "cfBeacon": "{"token": "aa68fa3bf166467082bc79ba029b057f"}",
+          },
+          "defer": true,
+          "src": "https://static.cloudflareinsights.com/beacon.min.js",
+        },
+      ]
+    `);
+  });
 });
