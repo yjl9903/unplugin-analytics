@@ -1,8 +1,17 @@
 {
   "name": "unplugin-analytics",
   "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Universal Analytics Engines Integration",
+  "keywords": [
+    "analytics",
+    "google-analytics",
+    "umami",
+    "plausible",
+    "vite-plugin",
+    "unplugin",
+    "vite",
+    "webpack"
+  ],
   "homepage": "https://github.com/yjl9903/unplugin-analytics#readme",
   "bugs": {
     "url": "https://github.com/yjl9903/unplugin-analytics/issues"
