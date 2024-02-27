@@ -75,7 +75,7 @@ Then add the astro component made of injected scripts to your layouts.
 ---
 // src/layouts/Layout.astro
 
-import Analytics from '~analytics/component.astro'
+import Analytics from '~analytics/scripts.astro'
 
 // ...
 ---

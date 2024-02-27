@@ -16,7 +16,7 @@ export default (options: Options = {}) => ({
 function VitePlugin(options: Options) {
   let config: any;
 
-  const Component = `~analytics/component.astro`;
+  const Component = `~analytics/scripts.astro`;
 
   return {
     name: 'unplugin-analytics:astro',
