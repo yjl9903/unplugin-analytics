@@ -27,6 +27,7 @@ export default defineNuxtPlugin({
         if ('src' in tag) {
           desc.src = tag.src;
         } else {
+          desc.type = tag.type;
           desc.children = tag.children;
         }
 
