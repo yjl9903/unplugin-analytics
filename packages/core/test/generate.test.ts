@@ -98,6 +98,25 @@ describe('Generate script tags', () => {
         },
       ]
     `);
+
+    expect(
+      generate({
+        plausible: {
+          src: `plausible.io`,
+          domain: `garden.onekuma.cn`
+        }
+      })
+    ).toMatchInlineSnapshot(`
+      [
+        {
+          "dataset": {
+            "domain": "garden.onekuma.cn",
+          },
+          "defer": true,
+          "src": "https://plausible.io/js/script.js",
+        },
+      ]
+    `);
   });
 
   it('should generate cloudflare', () => {

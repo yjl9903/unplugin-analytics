@@ -12,7 +12,7 @@ export interface PlausibleOptions {
 }
 
 export function Plausible(options: PlausibleOptions): ScriptTag {
-  const src = options.src ?? `https://plausible.io/js/script.js`;
+  const src = resolveSrc(options.src ?? `https://plausible.io/js/script.js`);
   const domain = options.domain;
 
   return {
@@ -22,4 +22,12 @@ export function Plausible(options: PlausibleOptions): ScriptTag {
       domain
     }
   };
+}
+
+function resolveSrc(src: string) {
+  const RE = /https:\/\/(.*)\/js\/script\.js/;
+  if (RE.test(src)) {
+    return src;
+  }
+  return `https://${src}/js/script.js`;
 }
