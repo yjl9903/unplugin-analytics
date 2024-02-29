@@ -29,9 +29,10 @@ const nuxtModule = defineNuxtModule<AnalyticsOptions>({
     );
 
     const { resolve } = createResolver(import.meta.url);
-
+    const src = resolve('runtime/plugins/analytics');
+    nuxt.options.build.transpile.push(src);
     addPlugin({
-      src: resolve('runtime/plugins/analytics'),
+      src,
       mode: 'server'
     });
   }
