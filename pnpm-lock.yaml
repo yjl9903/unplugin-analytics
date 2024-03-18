@@ -9,13 +9,13 @@ importers:
   .:
     devDependencies:
       '@nuxt/kit':
-        specifier: ^3.10.3
+        specifier: ^3.11.0
         version: 3.11.0(rollup@4.13.0)
       '@nuxt/module-builder':
         specifier: ^0.5.5
         version: 0.5.5(@nuxt/kit@3.11.0)(nuxi@3.10.1)(typescript@5.4.2)
       '@nuxt/schema':
-        specifier: ^3.10.3
+        specifier: ^3.11.0
         version: 3.11.0(rollup@4.13.0)
       '@types/node':
         specifier: ^20.11.28
@@ -27,7 +27,7 @@ importers:
         specifier: ^0.20.2
         version: 0.20.2
       nuxt:
-        specifier: ^3.10.3
+        specifier: ^3.11.0
         version: 3.11.0(@types/node@20.11.28)(rollup@4.13.0)(typescript@5.4.2)(vite@5.1.6)
       rollup:
         specifier: ^4.13.0
