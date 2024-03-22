@@ -5,6 +5,8 @@ import { defineNuxtModule, createResolver, addPlugin } from '@nuxt/kit';
 
 import { type AnalyticsOptions } from '@unplugin-analytics/core';
 
+import { UnpluginAnalyticsRuntime } from './plugin';
+
 const nuxtModule = defineNuxtModule<AnalyticsOptions>({
   meta: {
     // Usually the npm package name of your module
@@ -22,6 +24,18 @@ const nuxtModule = defineNuxtModule<AnalyticsOptions>({
   // Shorthand sugar to register Nuxt hooks
   hooks: {},
   setup(options: AnalyticsOptions = {}, nuxt) {
+    // install webpack plugin
+    nuxt.hook('webpack:config', async (config: any) => {
+      config.plugins = config.plugins || [];
+      config.plugins.unshift(UnpluginAnalyticsRuntime.webpack({ analytics: options }));
+    });
+
+    // install vite plugin
+    nuxt.hook('vite:extendConfig', async (config: any) => {
+      config.plugins = config.plugins || [];
+      config.plugins.push(UnpluginAnalyticsRuntime.vite({ analytics: options }));
+    });
+
     // Add module options to public runtime config
     nuxt.options.runtimeConfig.public.analytics = defu(
       nuxt.options.runtimeConfig.public.analytics as AnalyticsOptions,

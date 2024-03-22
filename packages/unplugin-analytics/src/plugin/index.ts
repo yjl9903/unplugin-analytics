@@ -13,17 +13,51 @@ export interface Options {
   analytics?: AnalyticsOptions;
 }
 
-export const UnpluginAnalytics = createUnplugin<Options | undefined>((options = {}) => {
-  let config: any;
+export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((options = {}) => {
+  const scripts: Record<string, () => string> = {
+    clarity() {
+      return [`export const clarity = window.clarity;`].join('\n');
+    },
+    umami() {
+      return [`export const umami = window.umami;`].join('\n');
+    }
+  };
+  const moduleNames = Object.keys(scripts).map((s) => `~analytics/${s}`);
 
   return {
-    name: 'unplugin-analytics',
+    name: 'unplugin-analytics:runtime',
+    resolveId(id) {
+      if (moduleNames.includes(id)) {
+        return `\0${id}`;
+      }
+    },
+    loadInclude(id) {
+      if (!id.startsWith('\0')) return false;
+      id = id.slice(1);
+      return moduleNames.includes(id);
+    },
+    async load(id) {
+      if (!id.startsWith('\0')) return;
+      id = id.slice(1 + `~analytics/`.length);
+
+      if (id in scripts) {
+        return scripts[id]();
+      }
+    }
+  };
+});
+
+export const UnpluginAnalytics = createUnplugin<Options | undefined>((options = {}) => {
+  let isDev = false;
+
+  return {
+    name: 'unplugin-analytics:html',
     vite: {
-      configResolved(resolvedConfig: any) {
-        config = resolvedConfig;
+      configResolved(resolvedConfig) {
+        isDev = resolvedConfig.command === 'serve';
       },
       transformIndexHtml(_html, ctx) {
-        if (options.dev && config.command === 'serve') {
+        if (options.dev && isDev) {
           return;
         }
 

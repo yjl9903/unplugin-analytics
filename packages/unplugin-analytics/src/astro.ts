@@ -1,7 +1,7 @@
 import { kebabCase } from 'scule';
 import { generate } from '@unplugin-analytics/core';
 
-import type { Options } from './plugin';
+import { type Options, UnpluginAnalyticsRuntime } from './plugin';
 
 export default (options: Options = {}) => ({
   name: 'unplugin-analytics',
@@ -9,6 +9,7 @@ export default (options: Options = {}) => ({
     'astro:config:setup': async (astro: any) => {
       astro.config.vite.plugins ||= [];
       astro.config.vite.plugins.push(VitePlugin(options));
+      astro.config.vite.plugins.push(UnpluginAnalyticsRuntime.vite(options));
     }
   }
 });
