@@ -72,7 +72,7 @@
   "scripts": {
     "build": "unbuild",
     "format": "prettier --write src/**/*.ts test/**/*.ts",
-    "prepare": "nuxt-module-build prepare",
+    "prepare:nuxt": "nuxt-module-build prepare",
     "test": "vitest",
     "test:ci": "vitest --run",
     "typecheck": "tsc --noEmit"
