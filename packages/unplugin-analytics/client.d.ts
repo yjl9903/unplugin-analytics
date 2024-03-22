@@ -19,6 +19,11 @@ declare module '~analytics/umami' {
 
   export const umami:
     | {
+        /**
+         * The Umami tracker exposes a function that you can call on your website if you want more control over your tracking.
+         *
+         * @link https://umami.is/docs/tracker-functions
+         */
         track: {
           (): Promise<string>;
 
