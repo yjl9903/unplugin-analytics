@@ -80,9 +80,9 @@ importers:
       '@onekuma/reset':
         specifier: ^0.1.11
         version: 0.1.11
-      vite-plugin-analytics:
+      unplugin-analytics:
         specifier: workspace:*
-        version: link:../../packages/vite-plugin-analytics
+        version: link:../../packages/unplugin-analytics
 
   packages/core: {}
 

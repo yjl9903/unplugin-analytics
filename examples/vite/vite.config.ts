@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 
-import Analytics from '../../packages/vite-plugin-analytics/src/index';
+import Analytics from '../../packages/unplugin-analytics/src/vite';
 
 export default defineConfig({
   base: './',
