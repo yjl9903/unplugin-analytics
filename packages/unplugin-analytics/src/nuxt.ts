@@ -42,6 +42,11 @@ const nuxtModule = defineNuxtModule<AnalyticsOptions>({
       options
     );
 
+    // Add types
+    nuxt.options.typescript.tsConfig.compilerOptions ||= {};
+    nuxt.options.typescript.tsConfig.compilerOptions.types ||= [];
+    nuxt.options.typescript.tsConfig.compilerOptions.types.push(`unplugin-analytics/client`);
+
     const { resolve } = createResolver(import.meta.url);
     const src = resolve('runtime/plugins/analytics');
     nuxt.options.build.transpile.push(src);
