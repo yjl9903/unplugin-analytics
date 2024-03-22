@@ -16,10 +16,19 @@ export interface Options {
 export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((options = {}) => {
   const scripts: Record<string, () => string> = {
     clarity() {
-      return [`export const clarity = window.clarity;`].join('\n');
+      return [`export let clarity = window.clarity;`].join('\n');
     },
     umami() {
-      return [`export const umami = window.umami;`].join('\n');
+      return [
+        `export let umami = window.umami;`,
+        `
+if (!umami) {
+  window.addEventListener("load", (event) => {
+    umami = window.umami
+    console.log("Load umami:", umami)
+  });
+}`
+      ].join('\n');
     }
   };
   const moduleNames = Object.keys(scripts).map((s) => `~analytics/${s}`);

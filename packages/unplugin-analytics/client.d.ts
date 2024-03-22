@@ -19,13 +19,19 @@ declare module '~analytics/umami' {
 
   export const umami: {
     track: {
-      (): void;
+      (): Promise<string>;
 
-      (payload: Payload): void;
+      (payload: Payload): Promise<string>;
 
-      (payload: (props: Payload) => Payload & Record<string, any>): void;
+      (
+        payload: (
+          props: Payload
+        ) =>
+          | (Payload & { name: string; data: Record<string, any> })
+          | (Payload & Record<string, any>)
+      ): Promise<string>;
 
-      (event: string, data?: Record<string, any>): void;
+      (event: string, data?: Record<string, any>): Promise<string>;
     };
   };
 }
