@@ -222,6 +222,17 @@ Generated script:
 <script defer data-website-id="..." src="https://umami.is/script.js"></script>
 ```
 
+You can use umami tracker function like:
+
+```ts
+import { umami } from '~analytics/umami';
+
+document.querySelector('.umami')?.addEventListener('click', () => {
+  // Track events
+  umami.track('click umami button');
+});
+```
+
 ### Plausible
 
 **Provider key**: `plausible`
