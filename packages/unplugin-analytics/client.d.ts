@@ -17,11 +17,15 @@ declare module '~analytics/umami' {
     website: string;
   };
 
-  type UmamiTrack = (
-    payload?: Payload | ((props: Payload) => Payload & Record<string, any>)
-  ) => void | ((event: string, data?: Record<string, any>) => void);
-
   export const umami: {
-    track: UmamiTrack;
+    track: {
+      (): void;
+
+      (payload: Payload): void;
+
+      (payload: (props: Payload) => Payload & Record<string, any>): void;
+
+      (event: string, data?: Record<string, any>): void;
+    };
   };
 }

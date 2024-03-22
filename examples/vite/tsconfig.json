@@ -15,7 +15,8 @@
     "strict": true,
     "target": "ESNext",
     "types": [],
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "paths": {}
   },
   "exclude": [
     "**/dist/**"
