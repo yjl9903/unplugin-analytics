@@ -16,7 +16,15 @@ export interface Options {
 export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((options = {}) => {
   const scripts: Record<string, () => string> = {
     clarity() {
-      return [`export let clarity = window.clarity;`].join('\n');
+      return [
+        `export let clarity = window.clarity;`,
+        `
+      if (!clarity) {
+        window.addEventListener("load", (event) => {
+          clarity = window.clarity;
+        });
+      }`
+      ].join('\n');
     },
     umami() {
       return [
@@ -24,8 +32,7 @@ export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((opt
         `
 if (!umami) {
   window.addEventListener("load", (event) => {
-    umami = window.umami
-    console.log("Load umami:", umami)
+    umami = window.umami;
   });
 }`
       ].join('\n');
