@@ -3,7 +3,7 @@ declare module '~analytics/scripts.astro' {
 }
 
 declare module '~analytics/clarity' {
-  export const clarity: (event: string) => void;
+  export const clarity: ((event: string) => void) | undefined;
 }
 
 declare module '~analytics/umami' {
@@ -17,21 +17,23 @@ declare module '~analytics/umami' {
     website: string;
   };
 
-  export const umami: {
-    track: {
-      (): Promise<string>;
+  export const umami:
+    | {
+        track: {
+          (): Promise<string>;
 
-      (payload: Payload): Promise<string>;
+          (payload: Payload): Promise<string>;
 
-      (
-        payload: (
-          props: Payload
-        ) =>
-          | (Payload & { name: string; data: Record<string, any> })
-          | (Payload & Record<string, any>)
-      ): Promise<string>;
+          (
+            payload: (
+              props: Payload
+            ) =>
+              | (Payload & { name: string; data: Record<string, any> })
+              | (Payload & Record<string, any>)
+          ): Promise<string>;
 
-      (event: string, data?: Record<string, any>): Promise<string>;
-    };
-  };
+          (event: string, data?: Record<string, any>): Promise<string>;
+        };
+      }
+    | undefined;
 }

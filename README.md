@@ -229,7 +229,7 @@ import { umami } from '~analytics/umami';
 
 document.querySelector('.umami')?.addEventListener('click', () => {
   // Track events
-  umami.track('click umami button');
+  umami?.track('click umami button');
 });
 ```
 
