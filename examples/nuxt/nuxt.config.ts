@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   analytics: {
     umami: {
       src: `https://umami.onekuma.cn/script.js`,
-      id: `a8602a4a-8d41-4df7-9797-5bd074785f2c`
+      id: `19800483-25c2-4fde-8330-3e717591eabb`
     },
     plausible: {
       domain: `garden.onekuma.cn`
