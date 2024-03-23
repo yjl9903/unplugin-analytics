@@ -3,7 +3,11 @@ declare module '~analytics/scripts.astro' {
 }
 
 declare module '~analytics/clarity' {
-  export const clarity: ((event: string) => void) | undefined;
+  export const clarity:
+    | {
+        (event: 'event', name: string): void;
+      }
+    | undefined;
 }
 
 declare module '~analytics/umami' {
