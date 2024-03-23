@@ -10,6 +10,11 @@ export interface Options {
    */
   dev?: boolean;
 
+  /**
+   * SSR condition
+   */
+  ssr?: string;
+
   analytics?: AnalyticsOptions;
 }
 
@@ -19,11 +24,11 @@ export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((opt
       return [
         `export let clarity = window.clarity;`,
         `
-      if (!clarity) {
-        window.addEventListener("load", (event) => {
-          clarity = window.clarity;
-        });
-      }`
+if (!clarity) {
+  window.addEventListener("load", (event) => {
+    clarity = window.clarity;
+  });
+}`
       ].join('\n');
     },
     umami() {
