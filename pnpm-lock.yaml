@@ -9,13 +9,13 @@ importers:
   .:
     devDependencies:
       '@nuxt/kit':
-        specifier: ^3.11.1
+        specifier: ^3.11.2
         version: 3.11.2(rollup@4.14.1)
       '@nuxt/module-builder':
         specifier: ^0.5.5
         version: 0.5.5(@nuxt/kit@3.11.2)(nuxi@3.11.1)(typescript@5.4.4)
       '@nuxt/schema':
-        specifier: ^3.11.1
+        specifier: ^3.11.2
         version: 3.11.2(rollup@4.14.1)
       '@types/node':
         specifier: ^20.12.5
@@ -27,7 +27,7 @@ importers:
         specifier: ^0.20.2
         version: 0.20.2
       nuxt:
-        specifier: ^3.11.1
+        specifier: ^3.11.2
         version: 3.11.2(@types/node@20.12.5)(@unocss/reset@0.59.0)(floating-vue@5.2.2)(rollup@4.14.1)(typescript@5.4.4)(unocss@0.59.0)(vite@5.2.8)
       rollup:
         specifier: ^4.14.1
