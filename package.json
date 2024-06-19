@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@nuxt/kit": "^3.12.2",
-    "@nuxt/module-builder": "^0.7.1",
+    "@nuxt/module-builder": "^0.8.0",
     "@nuxt/schema": "^3.12.2",
     "@types/node": "^20.14.5",
     "bumpp": "latest",
