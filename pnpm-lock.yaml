@@ -51,8 +51,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2(@types/node@20.14.10)(terser@5.31.1)
       webpack:
-        specifier: ^5.92.1
-        version: 5.92.1(esbuild@0.23.0)
+        specifier: ^5.93.0
+        version: 5.93.0(esbuild@0.23.0)
 
   examples/astro:
     devDependencies:
@@ -5158,6 +5158,16 @@ packages:
 
   webpack@5.92.1:
     resolution: {integrity: sha512-JECQ7IwJb+7fgUFBlrJzbyu3GEuNBcdqr1LD7IbSzwkSmIevTm8PF+wej3Oxuz/JFBUZ6O1o43zsPkwm1C4TmA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
+
+  webpack@5.93.0:
+    resolution: {integrity: sha512-Y0m5oEY1LRuwly578VqluorkXbvXKh7U3rLoQCEO04M97ScRr44afGVkI0FQFsXzysk5OgFAxjZAb9rsGQVihA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -10534,14 +10544,14 @@ snapshots:
     optionalDependencies:
       esbuild: 0.22.0
 
-  terser-webpack-plugin@5.3.10(esbuild@0.23.0)(webpack@5.92.1(esbuild@0.23.0)):
+  terser-webpack-plugin@5.3.10(esbuild@0.23.0)(webpack@5.93.0(esbuild@0.23.0)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.31.1
-      webpack: 5.92.1(esbuild@0.23.0)
+      webpack: 5.93.0(esbuild@0.23.0)
     optionalDependencies:
       esbuild: 0.23.0
 
@@ -11144,7 +11154,7 @@ snapshots:
       - esbuild
       - uglify-js
 
-  webpack@5.92.1(esbuild@0.23.0):
+  webpack@5.93.0(esbuild@0.23.0):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.5
@@ -11167,7 +11177,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.23.0)(webpack@5.92.1(esbuild@0.23.0))
+      terser-webpack-plugin: 5.3.10(esbuild@0.23.0)(webpack@5.93.0(esbuild@0.23.0))
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
