@@ -110,7 +110,7 @@ importers:
         specifier: ^1.3.0
         version: 1.3.0
       unplugin:
-        specifier: ^1.12.2
+        specifier: ^1.12.3
         version: 1.12.3
       vite:
         specifier: '>=3.2.7'
