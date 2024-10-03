@@ -41,6 +41,10 @@ if (!import.meta.env.SSR && !umami) {
   });
 }`
       ].join('\n');
+    },
+    scripts() {
+      const tags = generate(options.analytics ?? []);
+      return [`const tags = ${JSON.stringify(tags)};`, `export default tags;`].join('\n');
     }
   };
   const moduleNames = Object.keys(scripts).map((s) => `~analytics/${s}`);

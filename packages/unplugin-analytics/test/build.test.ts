@@ -5,6 +5,45 @@ import { fileURLToPath } from 'node:url';
 
 import { describe, it, expect } from 'vitest';
 
+describe('~analytics/scripts', () => {
+  it('should work', async () => {
+    const tags = (await import('~analytics/scripts')).default;
+    expect(tags).toMatchInlineSnapshot(`
+      [
+        {
+          "dataset": {
+            "websiteId": "19800483-25c2-4fde-8330-3e717591eabb",
+          },
+          "defer": true,
+          "src": "https://umami.onekuma.cn/script.js",
+        },
+        {
+          "dataset": {
+            "domain": "garden.onekuma.cn",
+          },
+          "defer": true,
+          "src": "https://plausible.io/js/script.js",
+        },
+        {
+          "dataset": {
+            "cfBeacon": "{"token": "aa68fa3bf166467082bc79ba029b057f"}",
+          },
+          "defer": true,
+          "src": "https://static.cloudflareinsights.com/beacon.min.js",
+        },
+        {
+          "children": "(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "kwj19d7z4j");",
+          "type": "text/javascript",
+        },
+      ]
+    `);
+  });
+});
+
 describe(
   'Examples',
   () => {

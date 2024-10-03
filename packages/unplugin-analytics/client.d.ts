@@ -1,5 +1,21 @@
+declare module '~analytics/scripts' {
+  import type { ScriptTag } from '@unplugin-analytics/core';
+
+  declare const tags: ScriptTag[];
+
+  export default tags;
+}
+
 declare module '~analytics/scripts.astro' {
   export default function Analytics(): any;
+}
+
+declare module '~analytics/clarity' {
+  export const clarity:
+    | {
+        (event: 'event', name: string): void;
+      }
+    | undefined;
 }
 
 declare module '~analytics/clarity' {
