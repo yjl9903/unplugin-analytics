@@ -22,9 +22,9 @@ export const UnpluginAnalyticsRuntime = createUnplugin<Options | undefined>((opt
   const scripts: Record<string, () => string> = {
     clarity() {
       return [
-        `export let clarity = window.clarity;`,
+        `export let clarity = import.meta.env.SSR ? undefined : window.clarity;`,
         `
-if (!clarity) {
+if (!import.meta.env.SSR && !clarity) {
   window.addEventListener("load", (event) => {
     clarity = window.clarity;
   });
@@ -33,9 +33,9 @@ if (!clarity) {
     },
     umami() {
       return [
-        `export let umami = window.umami;`,
+        `export let umami = import.meta.env.SSR ? undefined : window.umami;`,
         `
-if (!umami) {
+if (!import.meta.env.SSR && !umami) {
   window.addEventListener("load", (event) => {
     umami = window.umami;
   });
