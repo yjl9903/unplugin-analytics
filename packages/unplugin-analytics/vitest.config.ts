@@ -4,8 +4,9 @@ import Analytics from './src/vite';
 
 export default defineConfig({
   test: {},
+  // @ts-ignore
   plugins: [
-    Analytics({
+    ...Analytics({
       analytics: {
         umami: {
           src: `https://umami.onekuma.cn/script.js`,

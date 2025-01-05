@@ -1,7 +1,8 @@
 {
   "extends": "../../tsconfig.json",
   "exclude": [
-    "dist/**/*.ts",
-    "src/nuxt/**/*.ts"
+    "vitest.config.ts",
+    "dist/**/*.{mts,cts,ts}",
+    "src/nuxt/**/*.ts",
   ]
 }
