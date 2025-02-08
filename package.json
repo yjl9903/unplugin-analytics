@@ -18,7 +18,7 @@
     "@nuxt/schema": "^3.15.4",
     "@types/node": "^22.13.1",
     "bumpp": "latest",
-    "esbuild": "^0.24.2",
+    "esbuild": "^0.25.0",
     "nuxt": "^3.15.4",
     "rollup": "^4.34.6",
     "tsx": "^4.19.2",
