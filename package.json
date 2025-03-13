@@ -29,7 +29,7 @@
     "vitest": "^3.0.8",
     "webpack": "^5.98.0"
   },
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.6.3",
   "engines": {
     "node": ">=v20.10.0"
   }
