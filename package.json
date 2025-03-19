@@ -13,13 +13,13 @@
     "postversion": "turbo run build --filter !@unplugin-analytics/*-demo"
   },
   "devDependencies": {
-    "@nuxt/kit": "^3.16.0",
+    "@nuxt/kit": "^3.16.1",
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.16.0",
+    "@nuxt/schema": "^3.16.1",
     "@types/node": "^22.13.10",
     "bumpp": "latest",
     "esbuild": "^0.25.1",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.16.1",
     "rollup": "^4.36.0",
     "tsx": "^4.19.3",
     "turbo": "^2.4.4",
