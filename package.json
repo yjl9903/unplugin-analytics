@@ -16,7 +16,7 @@
     "@nuxt/kit": "^3.16.2",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^3.16.2",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
     "bumpp": "latest",
     "esbuild": "^0.25.2",
     "nuxt": "^3.16.2",
