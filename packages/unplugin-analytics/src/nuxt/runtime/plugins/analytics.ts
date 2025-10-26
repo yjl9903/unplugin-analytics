@@ -6,6 +6,7 @@ import { defineNuxtPlugin, useHead, useRuntimeConfig } from '#imports';
 
 export default defineNuxtPlugin({
   parallel: true,
+
   setup() {
     // Skip dev mode
     if (import.meta.dev) return;
@@ -31,7 +32,7 @@ export default defineNuxtPlugin({
           if (tag.type) {
             desc.type = tag.type;
           }
-          desc.children = tag.children;
+          desc.innerHTML = tag.children;
         }
 
         return desc;

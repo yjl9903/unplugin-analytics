@@ -7,7 +7,7 @@
     "dev": "astro dev"
   },
   "devDependencies": {
-    "astro": "^4.4.5",
+    "astro": "^5.15.1",
     "unplugin-analytics": "workspace:*"
   }
 }
