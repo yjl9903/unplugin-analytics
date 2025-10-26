@@ -1,8 +1,11 @@
 {
   "extends": "../../tsconfig.json",
+  "include": [
+    "*.d.ts",
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
   "exclude": [
-    "vitest.config.ts",
-    "dist/**/*.{mts,cts,ts}",
-    "src/nuxt/**/*.ts",
+    "src/nuxt/**/*.ts"
   ]
 }
