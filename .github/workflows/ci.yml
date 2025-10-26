@@ -22,7 +22,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 24.x
+          node-version: 24.10.0
           cache: pnpm
 
       - name: Install
