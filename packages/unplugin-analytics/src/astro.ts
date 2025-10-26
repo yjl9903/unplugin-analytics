@@ -43,6 +43,7 @@ function VitePlugin(options: Options) {
             pieces.push(`async`);
           }
           for (const [_key, _value] of Object.entries(tag.dataset ?? {})) {
+            if (_value === undefined || _value === null) continue;
             const key = kebabCase(`data-${_key}`);
             const value = escape(_value);
             pieces.push(`${key}="${value}"`);

@@ -21,6 +21,7 @@ export default defineNuxtPlugin({
         };
 
         for (const [key, value] of Object.entries(tag.dataset ?? {})) {
+          if (value === undefined || value === null) continue;
           desc[kebabCase(`data-${key}`)] = value;
         }
 

@@ -14,6 +14,7 @@ export function injectScriptTags(options: AnalyticsOptions = {}) {
           const desc: ['script', Record<string, string | undefined>, string] = ['script', {}, ''];
 
           for (const [key, value] of Object.entries(tag.dataset ?? {})) {
+            if (value === undefined || value === null) continue;
             desc[1][kebabCase(`data-${key}`)] = value;
           }
 

@@ -14,6 +14,13 @@ describe('Generate script tags', () => {
       [
         {
           "dataset": {
+            "autoTrack": undefined,
+            "doNotTrack": undefined,
+            "domains": undefined,
+            "excludeHash": undefined,
+            "excludeSearch": undefined,
+            "hostUrl": undefined,
+            "tag": undefined,
             "websiteId": "a8602a4a-8d41-4df7-9797-5bd074785f2c",
           },
           "defer": true,
@@ -33,6 +40,13 @@ describe('Generate script tags', () => {
       [
         {
           "dataset": {
+            "autoTrack": undefined,
+            "doNotTrack": undefined,
+            "domains": undefined,
+            "excludeHash": undefined,
+            "excludeSearch": undefined,
+            "hostUrl": undefined,
+            "tag": undefined,
             "websiteId": "a8602a4a-8d41-4df7-9797-5bd074785f2c",
           },
           "defer": true,
@@ -52,6 +66,46 @@ describe('Generate script tags', () => {
       [
         {
           "dataset": {
+            "autoTrack": undefined,
+            "doNotTrack": undefined,
+            "domains": undefined,
+            "excludeHash": undefined,
+            "excludeSearch": undefined,
+            "hostUrl": undefined,
+            "tag": undefined,
+            "websiteId": "a8602a4a-8d41-4df7-9797-5bd074785f2c",
+          },
+          "defer": true,
+          "src": "https://umami.onekuma.cn/script.js",
+        },
+      ]
+    `);
+
+    expect(
+      generate({
+        umami: {
+          src: `umami.onekuma.cn`,
+          id: `a8602a4a-8d41-4df7-9797-5bd074785f2c`,
+          hostUrl: `https://umami.onekuma.cn`,
+          autoTrack: false,
+          domains: [`onekuma.cn`],
+          tag: 'test',
+          excludeSearch: true,
+          excludeHash: true,
+          doNotTrack: true
+        }
+      })
+    ).toMatchInlineSnapshot(`
+      [
+        {
+          "dataset": {
+            "autoTrack": "false",
+            "doNotTrack": "true",
+            "domains": "onekuma.cn",
+            "excludeHash": "true",
+            "excludeSearch": "true",
+            "hostUrl": "https://umami.onekuma.cn",
+            "tag": "test",
             "websiteId": "a8602a4a-8d41-4df7-9797-5bd074785f2c",
           },
           "defer": true,

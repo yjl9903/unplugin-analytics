@@ -8,6 +8,6 @@ export type ScriptTag = Prettify<
 
     defer?: boolean;
 
-    dataset?: Record<string, string>;
+    dataset?: Record<string, string | undefined | null>;
   }
 >;
