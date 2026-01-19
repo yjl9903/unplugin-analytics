@@ -20,7 +20,7 @@
     "bumpp": "latest",
     "esbuild": "^0.27.2",
     "nuxt": "^4.2.2",
-    "rollup": "^4.55.1",
+    "rollup": "^4.55.2",
     "tsx": "^4.21.0",
     "turbo": "^2.7.5",
     "typescript": "^5.9.3",
