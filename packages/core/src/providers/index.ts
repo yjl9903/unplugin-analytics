@@ -5,7 +5,10 @@ import { ClarityKey, Clarity } from './clarity';
 import { PlausibleKey, Plausible } from './plausible';
 import { CloudflareKey, Cloudflare } from './cloudflare';
 
-export const providers = new Map<string, (options: any) => ScriptTag | undefined>([
+export const providers: Map<string, (options: any) => ScriptTag | undefined> = new Map<
+  string,
+  (options: any) => ScriptTag | undefined
+>([
   [UmamiKey, Umami],
   [ClarityKey, Clarity],
   [PlausibleKey, Plausible],

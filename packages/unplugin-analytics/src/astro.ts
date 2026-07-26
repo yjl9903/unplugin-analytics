@@ -1,9 +1,18 @@
 import { kebabCase } from 'scule';
+import type { Plugin } from 'vite';
+
 import { generate } from '@unplugin-analytics/core';
 
 import { type Options, UnpluginAnalyticsRuntime } from './plugin';
 
-export default (options: Options = {}) => ({
+interface AstroIntegration {
+  name: string;
+  hooks: {
+    'astro:config:setup': (astro: any) => Promise<void>;
+  };
+}
+
+export default (options: Options = {}): AstroIntegration => ({
   name: 'unplugin-analytics',
   hooks: {
     'astro:config:setup': async (astro: any) => {
@@ -14,7 +23,7 @@ export default (options: Options = {}) => ({
   }
 });
 
-function VitePlugin(options: Options) {
+function VitePlugin(options: Options): Plugin {
   let config: any;
 
   const Component = `~analytics/scripts.astro`;
@@ -65,6 +74,6 @@ function VitePlugin(options: Options) {
   };
 }
 
-function escape(text: string) {
+function escape(text: string): string {
   return text.replace(/"/g, `&quot;`);
 }

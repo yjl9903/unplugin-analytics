@@ -123,7 +123,7 @@ describe('Generate script tags', () => {
       [
         {
           "attrs": {
-            "data-cf-beacon": "{&quot;token&quot;: &quot;aa68fa3bf166467082bc79ba029b057f&quot;}",
+            "data-cf-beacon": "{"token": "aa68fa3bf166467082bc79ba029b057f"}",
             "defer": true,
             "src": "https://static.cloudflareinsights.com/beacon.min.js",
           },

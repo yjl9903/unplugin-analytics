@@ -1,8 +1,9 @@
+import type { ScriptTag } from './tag';
 import type { AllProviders, AnalyticsOptions } from './types';
 
 import { providers } from './providers';
 
-export function generate(options: AnalyticsOptions) {
+export function generate(options: AnalyticsOptions): ScriptTag[] {
   const resolvedOptions = resolveOptions(options);
 
   return filterDef(
@@ -22,7 +23,7 @@ function resolveOptions(options: AnalyticsOptions): AllProviders[] {
     return filterDef(options);
   }
   const items = Object.entries(options);
-  return filterDef(items.map((item) => ({ ...item[1], provider: item[0] } as AllProviders)));
+  return filterDef(items.map((item) => ({ ...item[1], provider: item[0] }) as AllProviders));
 }
 
 function filterDef<T>(arr: Array<T | null | undefined>): T[] {

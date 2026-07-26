@@ -28,12 +28,6 @@
         "test/**/*.ts"
       ]
     },
-    "format": {
-      "inputs": [
-        "src/**/*.ts",
-        "test/**/*.ts"
-      ]
-    },
     "dev": {
       "cache": false
     }

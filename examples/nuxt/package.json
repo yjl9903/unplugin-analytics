@@ -9,7 +9,7 @@
     "start": "nuxi preview"
   },
   "devDependencies": {
-    "nuxt": "^4.2.0",
+    "nuxt": "^4.5.0",
     "unplugin-analytics": "workspace:*"
   }
 }

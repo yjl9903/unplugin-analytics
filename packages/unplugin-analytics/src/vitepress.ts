@@ -2,8 +2,8 @@ import { kebabCase } from 'scule';
 
 import { type AnalyticsOptions, generate } from '@unplugin-analytics/core';
 
-export function injectScriptTags(options: AnalyticsOptions = {}) {
-  return (ctx: any) => {
+export function injectScriptTags(options: AnalyticsOptions = {}): (ctx: any) => void {
+  return (ctx: any): void => {
     if (!ctx.head) return;
 
     const tags = generate(options);
