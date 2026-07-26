@@ -98,7 +98,7 @@ importers:
         specifier: workspace:*
         version: link:../core
       defu:
-        specifier: ^6.1.4
+        specifier: ^6.1.7
         version: 6.1.7
       esbuild:
         specifier: '*'
