@@ -21,8 +21,8 @@ importers:
         specifier: ^24.13.3
         version: 24.13.3
       bumpp:
-        specifier: ^12.2.3
-        version: 12.2.3
+        specifier: ^12.3.0
+        version: 12.3.0
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
@@ -2248,8 +2248,8 @@ packages:
   buffer@6.0.3:
     resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
 
-  bumpp@12.2.3:
-    resolution: {integrity: sha512-VxquP72qLNmvT/Or8eSingfZpl3uz82FOn+Gc4StwcDnf+IkoKH9n70cyLIfn0TufSCr64lnGBXaHTONbRvvDA==}
+  bumpp@12.3.0:
+    resolution: {integrity: sha512-YgW09sgbIGQmAD/Jk7FEGP0tm0PeDz+Zgk+IAk+MOHhb/98pj/l3CgkxSjd7C1O99JPxTNwS+bPOTNaHuNh6lQ==}
     engines: {node: ^22.18.0 || ^24.11.0 || >=26.0.0}
     hasBin: true
 
@@ -7265,7 +7265,7 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  bumpp@12.2.3:
+  bumpp@12.3.0:
     dependencies:
       args-tokenizer: 0.3.0
       cac: 7.0.0
