@@ -30,7 +30,7 @@
     "vitest": "^5.0.1",
     "webpack": "^5.111.1"
   },
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.5.1",
   "engines": {
     "node": "^22.19.0 || >=24.11.0"
   }
